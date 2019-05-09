@@ -1,0 +1,140 @@
+#navbar {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 250, 249, 1);
+  position: fixed;
+  z-index: 200;
+}
+.logo {
+  flex: 0 auto;
+  height: 4.3rem;
+  align-self: center;
+  font-family: garamond georgia;
+  font-size: 4.2rem;
+  text-transform: uppercase;
+  line-height: 1.3;
+  text-decoration: none;
+  letter-spacing: .5rem;
+  z-index: 200;
+}
+.logo:hover,
+.logo:visited,
+.logo:active {
+  color: #909;
+}
+.itemlist,
+.item {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.navitems {
+  flex: 1 auto;
+  display: inline-flex;
+  align-self: center;
+  max-width: 70%;
+}
+.backdrop {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.item a,
+.item a:hover,
+.item a:active,
+.item a:visited {
+  text-decoration: none;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+.item a.active {
+  color: crimson;
+}
+
+@media screen and (min-width: 1024px) {
+  #navbar {
+    padding: .5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  #navbar {
+    padding: .5rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #btn-tribar {
+    display: none;
+  }
+  .itemlist {
+    display: inline-flex;
+    justify-content: space-around;
+    flex: 1 auto;
+  }
+  .item a,
+  .item a:hover,
+  .item a:visited,
+  .item a:active {
+    color: #909;
+    letter-spacing: 0rem;
+  }
+  .item a.active {
+    color: crimson;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #navbar {
+    padding: .5rem 1rem;
+  }
+  #btn-tribar {
+    display: inline-block;
+    z-index: 200;
+  }
+  .itemlist {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    transform: scale(.2);
+    transition: transform 500ms ease-in-out 50ms, opacity 500ms ease-in-out 50ms;
+    z-index: 100;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255,204,204,.9);
+  }
+  .navitems {
+    flex: 0;
+  }
+  #btn-tribar.active + .itemlist {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .item {
+    padding: 2rem;
+    margin: 0 10rem;
+  }
+  .item a,
+  .item a:hover,
+  .item a:active,
+  .item a:visited {
+    color: #333;
+    letter-spacing: .5rem;
+  }
+  .item a.active {
+    color: #909;
+  }
+  .item:not(:last-child) {
+    border-bottom: thin solid #909;
+  }
+}
