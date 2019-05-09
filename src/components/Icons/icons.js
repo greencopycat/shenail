@@ -5,18 +5,12 @@ export class Tribar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      callback: this.props.callback ? this.props.callback : ()=>{},
-      active: false
+      callback: this.props.callback ? this.props.callback : ()=>{}
     }
-  }
-  componentWillReceiveProps() {
-    this.setState(nextState=>({
-      active: !nextState
-    }))
   }
   render() {
     return (
-      <button id="btn-tribar" className={"btn btn-sqr btn-white"+(this.state.active?" active": "")} onClick={this.props.click}>
+      <button id="btn-tribar" className="btn btn-sqr btn-white" onClick={this.toggleActive}>
         <svg width="30" height="30" viewBox="0 2.2 3 5.2" id="tribar">
           <path
              style={{fill:"none",stroke:"#000000",strokeWidth:"0.3px"}}
@@ -33,6 +27,9 @@ export class Tribar extends Component {
         </svg>
       </button>
     )
+  }
+  toggleActive = (e) => {
+    e.currentTarget.classList.toggle('active');
   }
 }
 
