@@ -14,8 +14,15 @@ class Store extends Component {
         </Helmet>
         <section className={global.section}>
           <h2 className="heading2">Location</h2>
-          <iframe className={styles.gmap} frameBorder="0" style={{border:0}} title="Google Map"
-  src="https://www.google.com/maps/embed/v1/place?q=3205%20Alma%20Drive%20%23413%2C%20Plano%2C%20TX%2C%20USA&key=AIzaSyDbtfBcI_4VBITgt9qb4ne-jkcIgnFfJ5o" allowFullScreen>
+          <iframe 
+            className={styles.gmap} 
+            frameBorder="0" 
+            style={{
+              border: "2px solid",
+              backgroundColor: "rgba(255,255,255,.8)"
+            }} 
+            title="Google Map"
+            src="https://www.google.com/maps/embed/v1/place?q=3205%20Alma%20Drive%20%23413%2C%20Plano%2C%20TX%2C%20USA&key=AIzaSyDbtfBcI_4VBITgt9qb4ne-jkcIgnFfJ5o" allowFullScreen>
           </iframe>
         </section>
         <section className={global.section}>
