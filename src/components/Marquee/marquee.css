@@ -1,4 +1,36 @@
 #hero {
-  width: inherit;
-  overflow-x: hidden;
+  width: 100%;
+  overflow: hidden;
+  height: 65rem;
+}
+.hero-images {
+  position: relative;
+}
+.hero-images,
+.slide {
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  opacity: 1;
+  animation: mvo 7s 50ms 1 ease-out;
+  animation-fill-mode: forwards;
+  transform: scale(1.2) translate3d(40px, 40px, 100px);
+}
+.slide.active {
+  transform: scale(1.1) translate3d(0px, 0px, 0px);
+  opacity: 0;
+  animation: mvi 7s 50ms 1 ease-in;
+  animation-fill-mode: forwards;
+}
+@keyframes mvi {
+  from { transform: scale(1.1) translate3D(0px, 0px, 0px); opacity: 0; }
+  to { transform: scale(1.2) translate3d(40px, 40px, 100px); opacity: 1; }
+}
+@keyframes mvo {
+  from { transform: scale(1.2) translate3d(40px, 40px, 100px); opacity: 1; }
+  to { transform: scale(1.3) translate3d(80px, 80px, 200px); opacity: 0; }
 }

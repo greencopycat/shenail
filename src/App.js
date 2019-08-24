@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route, HashRouter } from 'react-router-dom';
 
 import Navbar from './components/Navbar/navbar';
+import Helmet from 'react-helmet';
 import './App.css';
 
 import Home from './components/Home/home';
@@ -16,7 +17,11 @@ import PageNotFound from './components/PageNotFound/pagenotfound';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Helmet>
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Adamina|El+Messiri" rel="stylesheet" />
+      </Helmet>
+      <HashRouter>
         <Navbar />
         <Switch>
           <Route path="/" exact component={ Home }></Route>
@@ -28,7 +33,7 @@ function App() {
           <Route path="/store" exact component={ Store }></Route>
           <Route component={ PageNotFound }></Route>
         </Switch>
-      </Router>
+      </HashRouter>
     </div>
   );
 }

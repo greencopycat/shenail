@@ -7,7 +7,7 @@ import Marquee from '../Marquee/marquee';
 class Home extends Component {
   render() {
     return (
-      <div className="page-content">
+      <div className="page-content full-bleed">
         <Helmet>
           <title>She Nail - Home</title>
         </Helmet>

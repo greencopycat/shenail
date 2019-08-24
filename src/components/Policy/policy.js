@@ -10,6 +10,7 @@ class Policy extends Component {
           <title>She Nail - Policy</title>
         </Helmet>
         <h1 className="heading1">Policy</h1>
+        <h2>Coming soon...</h2>
       </div>
     )
   }

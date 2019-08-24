@@ -10,7 +10,7 @@ class Specialty extends Component {
           <title>She Nail - Specialty</title>
         </Helmet>
         <h1 className="heading1">Specialty</h1>
-        <ul>
+        <ul className="specialties">
           <li>Callus Removal</li>
           <li>Classic Manicure</li>
           <li>Classic Pedicure</li>

@@ -9,3 +9,13 @@
 .grid1 {
   text-align: right;
 }
+
+.qr-wrapper {
+  width: 20rem;
+  height: 20rem;
+  margin: 4rem;
+}
+.qr-wrapper img {
+  width: inherit;
+  height: inherit;
+}

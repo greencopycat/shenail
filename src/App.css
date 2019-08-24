@@ -1,8 +1,12 @@
 html {
-  background-color: rgba(255, 204, 204, .1);
+  background-color: rgba(250, 245, 235, .9);
 }
 body {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+  font-family: 'Adamina', cursive;
+  line-height: 2;
+  color: #909;
+  letter-spacing: .1rem;
 }
 .btn.btn-sqr {
   width: 5rem;
@@ -21,10 +25,17 @@ body {
   position: relative;
   margin-bottom: 5rem;
 }
+.page-content.full-bleed {
+  padding: 0;
+}
 
 .heading1 {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
+  letter-spacing: .15rem;
+  font-weight: 100;
 }
 .heading2 {
-  font-size: 2.8rem;
+  font-size: 2.2rem;
+  letter-spacing: .15rem;
+  font-weight: 100;
 }

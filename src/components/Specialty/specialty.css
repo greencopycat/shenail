@@ -1,0 +1,14 @@
+.specialties {
+  margin: 0;
+  padding: 1.5rem 2rem;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgba(240, 235, 225, .9);
+  border-radius: .8rem;
+}
+
+.specialties > li {
+  flex: 0 50%;
+}

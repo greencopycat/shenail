@@ -10,6 +10,7 @@ class Price extends Component {
           <title>She Nail - Price</title>
         </Helmet>
         <h1 className="heading1">Price</h1>
+        <h2>Coming Soon...</h2>
       </div>
     )
   }
