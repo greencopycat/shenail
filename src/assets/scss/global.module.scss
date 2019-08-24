@@ -2,3 +2,25 @@
 	max-width: 76.8rem;
 	margin: 0 auto;
 }
+
+.pageContent {
+  padding: 1rem;
+  top: 5rem;
+  position: relative;
+  margin-bottom: 5rem;
+}
+.pageContent.fullBleed {
+  padding: 0;
+}
+
+
+.heading1 {
+  font-size: 2.4rem;
+  letter-spacing: .15rem;
+  font-weight: 100;
+}
+.heading2 {
+  font-size: 2.2rem;
+  letter-spacing: .15rem;
+  font-weight: 100;
+}

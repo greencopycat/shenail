@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './navbar.css';
+import global from '../../assets/scss/global.module.scss';
+import layout from '../../assets/scss/layout.module.scss';
 
 import { Tribar } from '../Icons/icons';
 import { NavLink } from 'react-router-dom';
@@ -15,19 +17,23 @@ class Navbar extends Component {
   }
   render() {
     return (
-      <nav id="navbar">
-        <NavLink to="/" exact className="logo">She Nail</NavLink>
-        <div className="navitems">
-          <Tribar expand={this.state.btnActive} toggle={this.toggle}/>
-          <ul className="itemlist">
-            {
-              menu.items.map(item=>(
-                <li key={item.key} className="item"><NavLink to={item.path} exact activeClassName="active" onClick={this.closeMenu}>{item.label}</NavLink></li>
-              ))
-            }
-          </ul>
+      <header>
+        <div className={`${global.section} ${layout.flex}`}>
+          <NavLink to="/" exact className="logo">She Nail</NavLink>
+          <nav id="navbar">
+            <div className="navitems">
+              <Tribar expand={this.state.btnActive} toggle={this.toggle}/>
+              <ul className="itemlist">
+                {
+                  menu.items.map(item=>(
+                    <li key={item.id} className="item"><NavLink to={item.path} exact activeClassName="active" onClick={this.closeMenu}>{item.label}</NavLink></li>
+                  ))
+                }
+              </ul>
+            </div>
+          </nav>
         </div>
-      </nav>
+      </header>
     )
   }
   toggle = (props) => {

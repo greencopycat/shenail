@@ -9,33 +9,12 @@ body {
   letter-spacing: .1rem;
 }
 .btn.btn-sqr {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-color: transparent;
   background-color: transparent;
 }
 .btn.btn-primary {
   background-color: #0754ac;
   border-color: transparent;
-}
-
-.page-content {
-  padding: 1rem;
-  top: 5rem;
-  position: relative;
-  margin-bottom: 5rem;
-}
-.page-content.full-bleed {
-  padding: 0;
-}
-
-.heading1 {
-  font-size: 2.4rem;
-  letter-spacing: .15rem;
-  font-weight: 100;
-}
-.heading2 {
-  font-size: 2.2rem;
-  letter-spacing: .15rem;
-  font-weight: 100;
 }

@@ -8,7 +8,7 @@ import qr from '../../assets/img/qr.jpg';
 class Store extends Component {
   render() {
     return (
-      <div className="page-content">
+      <div className={global.pageContent}>
         <Helmet>
           <title>She Nails - Store</title>
         </Helmet>

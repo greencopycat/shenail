@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
-import './gallery.css';
+import styles from './gallery.module.scss';
+import global from '../../assets/scss/global.module.scss';
 
 const images = require.context('./../../assets/img/filmstrip', false, /\.(png|jp?g|svg)$/);
 
@@ -20,13 +21,15 @@ class Gallery extends Component {
   }
   render() {
     return (
-      <div className="page-content">
+      <div className={global.pageContent}>
         <Helmet>
           <title>She Nail - Gallery</title>
         </Helmet>
-        <h1 className="heading1">Gallery</h1>
-        <Filmstrip drawer={this.state.drawer} view={this.view.bind(this)}/>
-        <Viewer display={this.state.display}/>
+        <section className={global.section}>
+          <h1 className={global.heading1}>Gallery</h1>
+          <Filmstrip drawer={this.state.drawer} view={this.view.bind(this)}/>
+          <Viewer display={this.state.display}/>
+        </section>
       </div>
     )
   }
@@ -37,15 +40,15 @@ class Gallery extends Component {
   }
 }
 
-const Viewer = ((props) => <div className="photo-viewer"><img alt="img" src={props.display}/></div>);
+const Viewer = ((props) => <div className={styles.photoViewer}><img alt="img" src={props.display}/></div>);
 
 class Filmstrip extends Component {
   render() {
     return (
-      <div className="filmstrip">
-        <ul className="fs-row">
+      <div className={styles.filmstrip}>
+        <ul className={styles.fsRow}>
           {
-            this.props.drawer.map((img,i)=><li key={i} className="fs-item" onClick={this.props.view.bind(null,img)}><img src={images(img)} alt="img" /></li>)
+            this.props.drawer.map((img,i)=><li key={i} className={styles.fsItem} onClick={this.props.view.bind(null,img)}><img src={images(img)} alt="img" /></li>)
           }
         </ul>
       </div>

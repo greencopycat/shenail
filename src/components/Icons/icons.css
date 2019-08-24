@@ -11,7 +11,7 @@
 }
 /* buttons transition */
 #tri-top, #tri-btm {
-  pointer-evetns: none;
+  pointer-events: none;
   stroke-dashoffset: 0;
   stroke-dasharray: 3 5;
   transition: stroke-dashoffset 300ms ease-in-out 50ms, stroke-dasharray 300ms ease-in-out 50ms;

@@ -1,14 +1,19 @@
+header {
+  position: fixed;
+  width: 100%;
+  height: 5rem;
+  z-index: 200;
+  background-color: rgba(250, 245, 235, 1);
+}
 #navbar {
   width: 100%;
   height: 5rem;
-  display: flex;
-  justify-content: space-between;
-  background-color: rgba(250, 245, 235, 1);
-  position: fixed;
-  z-index: 200;
+  line-height: 4rem;
+  position: relative;
+  flex: 1 auto;
 }
 .logo {
-  flex: 0 auto;
+  flex: 0 0 20rem;
   height: 4.3rem;
   align-self: center;
   font-family: 'El Messiri', cursive;
@@ -32,10 +37,10 @@
   margin: 0;
 }
 .navitems {
-  flex: 1 auto;
+  width: 100%;
   display: inline-flex;
   align-self: center;
-  max-width: 70%;
+  justify-content: space-between;
 }
 .backdrop {
   top: 0;
@@ -58,14 +63,24 @@
 }
 
 @media screen and (min-width: 1024px) {
+  header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   #navbar {
-    padding: .5rem 2rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
   }
 }
 
 @media screen and (max-width: 1023px) and (min-width: 768px) {
+  header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
   #navbar {
-    padding: .5rem 1.5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
   }
 }
 
@@ -87,12 +102,17 @@
 }
 
 @media screen and (max-width: 1023px) {
+  header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   #navbar {
-    padding: .5rem 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
   }
   #btn-tribar {
     display: inline-block;
-    z-index: 200;
+    z-index: 202;
   }
   .itemlist {
     position: fixed;
@@ -105,7 +125,7 @@
     overflow: hidden;
     transform: scale(.2);
     transition: transform 500ms ease-in-out 50ms, opacity 500ms ease-in-out 50ms;
-    z-index: 100;
+    z-index: 201;
     opacity: 0;
     display: flex;
     flex-direction: column;
@@ -114,6 +134,7 @@
   }
   .navitems {
     flex: 0;
+    justify-content: flex-end;
   }
   #btn-tribar.active + .itemlist {
     opacity: 1;
