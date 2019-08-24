@@ -1,0 +1,33 @@
+{
+	"items": [
+		{
+			"id": "1",
+			"path": "/",
+			"label": "Home"
+		},{
+			"id": "2",
+			"path": "/about",
+			"label": "About"
+		},{
+			"id": "3",
+			"path": "/specialty",
+			"label": "Specialty"
+		},{
+			"id": "4",
+			"path": "/price",
+			"label": "Price"
+		},{
+			"id": "5",
+			"path": "/gallery",
+			"label": "Gallery"
+		},{
+			"id": "6",
+			"path": "/policy",
+			"label": "Policy"
+		},{
+			"id": "7",
+			"path": "/store",
+			"label": "Store"
+		}
+	]
+}

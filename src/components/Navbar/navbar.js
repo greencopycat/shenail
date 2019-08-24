@@ -4,6 +4,8 @@ import './navbar.css';
 import { Tribar } from '../Icons/icons';
 import { NavLink } from 'react-router-dom';
 
+const menu = require('../../assets/content/en/menu.json');
+
 class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -18,13 +20,11 @@ class Navbar extends Component {
         <div className="navitems">
           <Tribar expand={this.state.btnActive} toggle={this.toggle}/>
           <ul className="itemlist">
-            <li className="item"><NavLink to="/" exact activeClassName="active" onClick={this.closeMenu}>Home</NavLink></li>
-            <li className="item"><NavLink to="/about" exact activeClassName="active" onClick={this.closeMenu}>About</NavLink></li>
-            <li className="item"><NavLink to="/specialty" exact activeClassName="active" onClick={this.closeMenu}>Specialty</NavLink></li>
-            <li className="item"><NavLink to="/price" exact activeClassName="active" onClick={this.closeMenu}>Price</NavLink></li>
-            <li className="item"><NavLink to="/gallery" exact activeClassName="active" onClick={this.closeMenu}>Gallery</NavLink></li>
-            <li className="item"><NavLink to="/policy" exact activeClassName="active" onClick={this.closeMenu}>Policy</NavLink></li>
-            <li className="item"><NavLink to="/store" exact activeClassName="active" onClick={this.closeMenu}>Store</NavLink></li>
+            {
+              menu.items.map(item=>(
+                <li key={item.key} className="item"><NavLink to={item.path} exact activeClassName="active" onClick={this.closeMenu}>{item.label}</NavLink></li>
+              ))
+            }
           </ul>
         </div>
       </nav>
