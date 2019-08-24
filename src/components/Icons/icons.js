@@ -10,7 +10,7 @@ export class Tribar extends Component {
   }
   render() {
     return (
-      <button id="btn-tribar" className="btn btn-sqr btn-white" onClick={this.toggleActive}>
+      <button id="btn-tribar" className={`btn btn-sqr btn-white${this.props.expand?' active': ''}`} onClick={this.props.toggle}>
         <svg width="30" height="30" viewBox="0 2.2 3 5.2" id="tribar">
           <path
              style={{fill:"none",stroke:"#000000",strokeWidth:"0.3px"}}
@@ -27,9 +27,6 @@ export class Tribar extends Component {
         </svg>
       </button>
     )
-  }
-  toggleActive = (e) => {
-    e.currentTarget.classList.toggle('active');
   }
 }
 
