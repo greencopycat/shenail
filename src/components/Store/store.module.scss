@@ -1,0 +1,46 @@
+.storeHours {
+  padding-left: 0;
+  text-align: center;
+}
+.storeHours > li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.gmap {
+  width: 100%;
+  max-width: 76.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+.storeInfo {
+  text-align: center;
+}
+.qrWrapper {
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(250, 245, 235, 1)
+}
+.qrWrapper img {
+  width: inherit;
+  height: inherit;
+  mix-blend-mode: darken;
+}
+
+@media screen and (min-width: 641px) {
+  .qrWrapper {
+    margin: 4rem auto; 
+  }
+  .gmap {
+    height: 55rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  .qrWrapper {
+    margin: 2rem auto;
+  }
+  .gmap {
+    height: 35rem;
+  }
+}
